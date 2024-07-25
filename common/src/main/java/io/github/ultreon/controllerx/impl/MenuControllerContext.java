@@ -51,7 +51,7 @@ public class MenuControllerContext extends ControllerContext {
         this.activate = mappings.register(new ControllerMapping<>(new ControllerAction.Button(ControllerBoolean.A), ControllerMapping.Side.RIGHT, Component.translatable("controllerx.action.menu.activate"), "activate", this::canActivate));
         this.scrollY = mappings.register(new ControllerMapping<>(new ControllerAction.Axis(ControllerSignedFloat.RightStickY), ControllerMapping.Side.RIGHT, Component.translatable("controllerx.action.menu.scroll_y"), "scroll_y"));
 
-        this.closeInventory = mappings.register(new ControllerMapping<>(new ControllerAction.Button(ControllerBoolean.Y), ControllerMapping.Side.RIGHT, Component.translatable("controllerx.action.menu.closeInventory"), "close_inventory", MenuControllerContext::isInventory));
+        this.closeInventory = mappings.register(new ControllerMapping<>(new ControllerAction.Button(ControllerBoolean.B), ControllerMapping.Side.RIGHT, Component.translatable("controllerx.action.menu.closeInventory"), "close_inventory", MenuControllerContext::isInventory));
         this.back = mappings.register(new ControllerMapping<>(new ControllerAction.Button(ControllerBoolean.B), ControllerMapping.Side.RIGHT, Component.translatable("controllerx.action.menu.back"), "back", this::isCloseableInGame));
         this.close = mappings.register(new ControllerMapping<>(new ControllerAction.Button(ControllerBoolean.B), ControllerMapping.Side.RIGHT, Component.translatable("controllerx.action.menu.close"), "close", this::isCloseableInMenu));
 
